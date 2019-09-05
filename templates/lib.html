@@ -1,0 +1,8 @@
+{% import 'admin/static.html' as admin_static with context %}
+
+{% macro import_js() %}
+<script src="{{url_for('static', filename='jquery.validate.min.js')}}"></script>
+<script src="{{url_for('static', filename='validate-form.js')}}" type="module"></script>
+<script src="{{url_for('static', filename='validate_ip.js')}}" type="module">
+</script>
+{% endmacro %}

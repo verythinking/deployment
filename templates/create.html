@@ -1,1 +1,15 @@
  {% extends 'admin/model/create.html' %}
+ {% import 'lib.html' as locallib with context %}
+
+{% block head %}
+{{ super() }}
+<style>
+    .help-block.help-block-error {
+        color: red;
+    }
+</style>
+{% endblock %}
+{% block tail %}
+{{ super() }}
+{{ locallib.import_js() }}
+ {% endblock %}
